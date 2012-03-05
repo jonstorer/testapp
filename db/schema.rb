@@ -11,15 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120303200617) do
+ActiveRecord::Schema.define(:version => 20120305173238) do
 
   create_table "audit_logs", :force => true do |t|
-    t.integer  "author_id"
     t.integer  "auditable_id"
     t.string   "auditable_type"
     t.text     "modifications"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+  end
+
+  create_table "comments", :force => true do |t|
+    t.text     "body"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "posts", :force => true do |t|

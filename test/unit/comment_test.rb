@@ -1,5 +1,5 @@
 require 'test_helper'
 
-class PostTest < ActiveSupport::TestCase
+class CommentTest < ActiveSupport::TestCase
   include AuditableSharedExamples
 end

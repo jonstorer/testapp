@@ -9,6 +9,8 @@ gem 'sqlite3'
 
 group :test do
   gem 'shoulda'
+  gem 'shoulda-context'
+  gem 'shoulda-matchers'
 end
 
 # Gems used only for assets and not required

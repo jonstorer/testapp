@@ -13,8 +13,6 @@ module Mixins::Auditable
   def cache_and_save_modifications
     modifications = changes
     yield
-    if modifications.any?
-      audit_logs.create_from_modifications(modifications)
-    end
+    audit_logs.create(modifications: modifications) if modifications.any?
   end
 end
